@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-2pod
+spec:
+  containers:
+    - name: sample-2pod
+      image: nginx
+      imagePullPolicy: IfNotPresent
+    - name: redis-container
+      image: redis:3.2
+  

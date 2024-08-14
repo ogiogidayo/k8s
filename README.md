@@ -15,3 +15,11 @@ curl -I localhost:8888
 > [!TIP]
 > `kubectl port-forward`の実行中に通信できるPodは同一の一つのPodのみ
 > 例えば`multi-resource`ではdeploymentとserviceは別々でフォワーディングする
+
+## Use Command in container
+
+```shell
+kubectl exec -it sample-pod -- /bin/bash
+# or
+kubectl exec -it sample-pod -- SOMECOMMAND
+```
